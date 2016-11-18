@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head></head>
+
+<body>
+
+
+
+  <h1>Articulo 1</h1>
+
+  <p id="c1">001</p>
+  <p id="n1">Camisa</p>
+  <p id="p1">8000</p>
+
+  <h1>Articulo 2</h1>
+
+  <p id="c2">002</p>
+  <p id="n2">Balon</p>
+  <p id="p2">5000</p>
+
+  <h1>Articulo 3</h1>
+
+  <p id="c3">003</p>
+  <p id="n3">Celular</p>
+  <p id="p3">30000</p>
+
+
+
+  <script>
+
+
+    var articulo1 = {
+        codigo: "001",
+        nombre: "Camisa",
+        precio: 8000
+    }
+
+
+
+
+    var articulo2 = new Object();
+    articulo2.codigo = "002";
+    articulo2.nombre = "Balon";
+    articulo2.precio = 5000;
+
+
+
+
+    function articulo3(codigo, nombre, precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    var articulo3 = new articulo3("003", "Celular", 30000);
+
+
+
+
+
+
+    document.getElementById("c1").innerHTML = articulo1.codigo;
+    document.getElementById("n1").innerHTML = articulo1.nombre;
+    document.getElementById("p1").innerHTML = articulo1.precio;
+
+    document.getElementById("c2").innerHTML = articulo2.codigo;
+    document.getElementById("n2").innerHTML = articulo2.nombre;
+    document.getElementById("p2").innerHTML = articulo2.precio;
+
+    document.getElementById("c3").innerHTML = articulo3.codigo;
+    document.getElementById("n3").innerHTML = articulo3.nombre;
+    document.getElementById("p3").innerHTML = articulo3.precio;
+
+</script>
+
+</body></html>
