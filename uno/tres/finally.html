@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>FINALLY</h1>
+  <p id="mensaje"></p>
+  <button type="button" name="button" onclick="mifuncion1"></button>
+</body>
+<script type="text/javascript">
+  function miFuncion1(){
+    try{
+      var edad = 60;
+      calcular(edad);//la fncion no esta definida
+
+    }catch(error){
+      alert("Existe un error - " + error.message);
+    }finally {
+      document.getElementById('mensaje').innerHTML = "Seguimos pese al error!!";
+    }
+  }
+
+</script>
+</html>
