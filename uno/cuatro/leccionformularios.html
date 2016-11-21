@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registro de usuarios</title>
+</head>
+<body onload="evento_onload()">
+    <h4>Formulario de Registro de Usuarios</h4>
+    <table>
+      <form class="" id="formulario" action="index.html" method="post">
+        <tr>
+          <td><label for="">Nombres:</label></td>
+          <td><input type="text" id="nombres" name="nombres" value="" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label for="">Apellidos:</label></td>
+          <td><input type="text" id="apellidos" name="apellidos" value="" onfocus="evento_onfocus(this)"></td>
+        </tr>
+        <tr>
+          <td><label for="">Identificación:</label></td>
+          <td><input type="text" id="identificacion" name="identificacion"value="" oncopy="evento_oncopy()"></td>
+        </tr>
+        <tr>
+          <td><label for="">Sexo</label></td>
+          <td><select class="" id="sexo" name="sexo">
+            <option name="" value=""></option>
+            <option name="masculino" value="masculino">Masculino</option>
+            <option name="femenino" value="femenino">Femenino</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td><label for="">Email:</label></td>
+          <td><input type="text" id="email" name="email" value=""></td>
+        </tr>
+        <tr>
+          <td><label for="">Teléfono:</label></td>
+          <td><input type="text" name="telefono" id="telefono" value=""></td>
+        </tr>
+        <tr>
+          <td><label for="">Dirección:</label></td>
+          <td><input type="text" id="direccion" name="direccion" value=""></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" name="enviar" id="enviar" value="Enviar" onclick="evento_onclick()">
+          </td>
+        </tr>
+      </form>
+    </table>
+</body>
+<script type="text/javascript">
+    function evento_onload(){
+      alert("Bienvenido a nuestro formulario de registro de usuarios!");
+    }
+
+    function evento_onclick(){
+      alert("Los datos han sido enviados correctamente");
+    }
+
+    function evento_onfocus(elemento){
+        elemento.style.background = "#cccccc";
+    }
+
+    function evento_oncopy(){
+      alert("El texto a sido copiado");
+    }
+</script>
+
+</html>

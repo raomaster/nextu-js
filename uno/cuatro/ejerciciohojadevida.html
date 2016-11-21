@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	function onload () {
+		alert("Bienvenido a su formato de Hoja de Vida");
+	}
+
+	function guardar(){
+	alert("Su Hoja de Vida ha Sido Guardada Correctamente");
+	}
+
+	function restablecer() {
+    alert("Se ha restablecido el Texto");
+}
+
+function seleccion() {
+    alert("Usted ha seleccionado el Texto");
+}
+
+
+function letrasmayusculas() {
+    var x = document.getElementById("mayusculas");
+    x.value = x.value.toUpperCase();
+
+     var y = document.getElementById("mayusculas1");
+    y.value = y.value.toUpperCase();
+
+}
+
+	</script>
+</head>
+<body onload="onload()">
+	<h1 align="center">Hoja de Vida</h1>
+
+<form onreset="restablecer()" >
+
+<h2>Informacion Personal</h2>
+Nombres: <input type="text" id="mayusculas" onchange="letrasmayusculas()"/><br>
+Apellidos: <input type="text"  id="mayusculas1" onchange="letrasmayusculas()" /><br>
+Direccion: <input type="text" /><br>
+Edad: <input type="text" /><br>
+Fecha de Nacimiento: <input type="date" /><br>
+Lugar de Nacimiento: <input type="text" /><br>
+Estado Civil: <input type="text" /><br>
+
+<h2>Informacion Academica</h2>
+Universidad: <input type="text" /><br>
+Profesion: <input type="text" /><br>
+<br>
+Observaciones<br>
+<textarea   onselect="seleccion()">Observaciones</textarea>
+<br>
+<input type="button" value="Enviar" onClick="guardar()"  />
+<input type="reset" value="Restablecer"  />
+</form>
+</body>
+</html>

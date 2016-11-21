@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" >
+
+
+var estudiantes = [
+    {
+		"codigo": "001",
+		"nombre": "Manuel Perez"
+	}, {
+		"codigo": "002",
+		"nombre": "Rosa Moreno"
+	}, {
+		"codigo": "003",
+		"nombre": "Carlos Rojas"
+	}
+
+];
+
+function leerJSON(json) {
+    var out = "";
+    var i;
+    for(i = 0; i < json.length; i++) {
+       alert("Codigo:"+json[i].codigo+"-"+"Nombre:"+json[i].nombre);
+    }
+
+}
+leerJSON(estudiantes);
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
