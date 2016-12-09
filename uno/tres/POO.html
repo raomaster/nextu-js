@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="saludo1"></p>
+  <p id="saludo2"></p>
+
+  <button type="button" name="button" onclick="miFuncion1()">Saludo 1</button>
+  <button type="button" name="button" onclick="miFuncion2()">Saludo 2</button>
+
+
+
+</body>
+<script type="text/javascript">
+  function Persona(nombre, edad, ciudad, email){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.ciudad = ciudad;
+    this.email = email;
+
+    this.saludar =  function() {
+      document.getElementById('saludo1').innerHTML = "Hola mi nombre es : " + this.nombre + " y mi edad es: " + this.edad;
+
+    };
+  }
+  var persona = new Persona("Carlos Morales", "24", "Cartagena", "carlos@hotmail.com");
+
+  function miFuncion1(argument){
+    persona.saludar();
+  }
+  function miFuncion2(argument){
+    document.getElementById('saludo2').innerHTML = "Es de " + persona.ciudad + " su email es " + persona.email;
+  }
+  </script>
+</html>

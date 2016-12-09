@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Throw</h1>
+    <button type="button" name="button" onclick="miFuncion1()">Ejecutar funcion 1</button>
+    <button type="button" name="button" onclick="miFuncion2()">Ejecutar funcion 2</button>
+</body>
+<script type="text/javascript">
+    function miFuncion1() {
+        try {
+            var mensaje = "Esto es un mensaje desde javascript";
+            if (isNaN(parseInt(mensaje))) {
+                throw "Parametro pasado al metodo parseInt no es un numero!";
+            }
+        } catch (error) {
+            alert("Existe un Error - " + error);
+        }
+    }
+
+    function miFuncion2() {
+        try {
+            var res = 45 / 0;
+            if (res == Infinity) {
+                throw "Division entre cero no es valida!";
+            }
+        } catch (error) {
+            alert("existe un error - " + error);
+        }
+    }
+</script>
+
+</html>

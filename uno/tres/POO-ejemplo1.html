@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+
+
+    <p id="mensaje"></p>
+
+
+
+    <button onclick="miFuncion()">Mostar Propiedades</button>
+
+
+
+</body>
+
+<script>
+
+
+		function Producto(codigo, nombre, cantidad, precio) {
+
+		    this.codigo = codigo;
+		    this.nombre = nombre;
+		    this.cantidad = cantidad;
+		    this.precio = precio;
+
+
+
+		    this.mostrar = function() {
+
+		    	var propiedades="";
+
+		    	propiedades+="Codigo: "+this.codigo+"<br>";
+		    	propiedades+="Nombre: "+this.nombre+"<br>";
+		    	propiedades+="Cantidad: "+this.cantidad+"<br>";
+		    	propiedades+="Precio: "+this.precio+"<br>";
+
+		        document.getElementById("mensaje").innerHTML =propiedades;
+		    };
+
+		}
+
+
+		var producto = new Producto("001", "Zapatos Nike", 20, 50000);
+
+
+
+		function miFuncion() {
+		    producto.mostrar();
+		}
+
+
+
+
+</script>
+
+</html>

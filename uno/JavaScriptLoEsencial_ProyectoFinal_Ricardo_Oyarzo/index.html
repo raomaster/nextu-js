@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+  #div{
+    background: #34495e;
+    position: relative;
+    top:10%;
+    left:40%;
+    width:40%;
+    height:60%;
+    padding: 10px 10px 10px 10px;
+  }
+
+  #cabecera{
+    background: #95a5a6;
+    padding: 50px 10px 10px 10px;
+    position: relative;
+    top: 5%;
+    left:40%;
+    width: 40%;
+    height: 5%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  #operacion{
+    border-radius: 5px;
+    background-color: #fff;
+    background-color: #bdc3c7;
+  }
+
+
+  #texto{
+    font-family:Arial;
+    font-weight: bolder;
+    color: #fff;
+
+  }
+  #texto_resultado{
+    font-size: 14px;
+    font-family:Arial;
+    font-weight: bolder;
+    color: #fff;
+
+  }
+
+  #border_table{
+    border: solid thin;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div id="cabecera" align="center">
+    <h1>Examen de Javascript: esencial</h1>
+
+  </div>
+  <div id="div" align="center">
+    <p id="texto"> Resultado</p>
+    <p id="texto_resultado"></p>
+    <input type="button" onclick="mostrarJSON()" name="name" value="Mostrar">
+
+    <input type="button" onclick="calcularPromedio()" name="name" value="Promedio">
+    <input type="button" onclick="mayorNota()" name="name" value="Mayor Nota">
+    <input type="button" onclick="menorNota()" name="name" value="Menor Nota">
+
+  </div>
+</body>
+<script type="text/javascript">
+var estudiantes = [
+    {
+    "codigo": "01",
+    "nombre": "Juan Perez",
+    "nota"  : 2
+  }, {
+    "codigo": "02",
+    "nombre": "Ricardo Oyarzo",
+    "nota"  : 8
+  }, {
+    "codigo": "03",
+    "nombre": "Diana Paredes",
+    "nota"  : 9
+  }, {
+    "codigo": "04",
+    "nombre": "Anais Oyarzo",
+    "nota"  : 7
+  }, {
+    "codigo": "05",
+    "nombre": "Pedro Picapiedra",
+    "nota"  : 10
+  }, {
+    "codigo": "06",
+    "nombre": "Osvaldo Mora",
+    "nota"  : 9
+  }, {
+    "codigo": "07",
+    "nombre": "Jaime Kram",
+    "nota"  : 5
+  }, {
+    "codigo": "08",
+    "nombre": "Jose Soto",
+    "nota"  : 8
+  }, {
+    "codigo": "09",
+    "nombre": "Maria Cruzat",
+    "nota"  : 5
+  }, {
+    "codigo": "10",
+    "nombre": "Francisca Mansilla",
+    "nota"  : 4
+  }
+
+];
+
+function mostrarJSON() {
+    var out = "<p align='center'>Estudiantes</p><table >";
+
+    for(var i = 0; i < estudiantes.length; i++) {
+       out +=  "<tr id='border_table'><td>Codigo:</td><td>" + estudiantes[i].codigo + "</td>" +
+               "<td>Nombre:</td><td>" + estudiantes[i].nombre + "</td>" +
+               "<td>Nota:</td><td>" + estudiantes[i].nota.toString() + "</td></tr>";
+
+    }
+    out += "</table>"
+
+    document.getElementById('texto_resultado').innerHTML = out;
+
+}
+
+function calcularPromedio() {
+  var suma=0;
+  for(var i = 0; i < estudiantes.length; i++) {
+     suma += estudiantes[i].nota;
+  }
+  var promedio = suma/estudiantes.length;
+  document.getElementById('texto_resultado').innerHTML = "El promedio es: " + promedio;
+}
+
+function mayorNota() {
+  var notamayor = [];
+  for(var i = 0; i < estudiantes.length; i++) {
+      if(i==0){
+        notamayor = estudiantes[i];
+      } else if(notamayor.nota < estudiantes[i].nota){
+        notamayor = estudiantes[i];
+      }
+
+    }
+  document.getElementById('texto_resultado').innerHTML =  "<table><tr><td>El alumno con la mejor nota es: </td></tr>" +
+                                                          "<tr><td>Codigo: </td><td>" + notamayor.codigo + "</td></tr>" +
+                                                          "<tr><td>Nombre: </td><td>" + notamayor.nombre + "</td></tr>" +
+                                                          "<tr><td>Nota: </td><td>" + notamayor.nota + "</td></tr></table>";
+}
+
+function menorNota() {
+  var notamenor = [];
+  for(var i = 0; i < estudiantes.length; i++) {
+      if(i==0){
+        notamenor = estudiantes[i];
+      } else if(notamenor.nota > estudiantes[i].nota){
+        notamenor = estudiantes[i];
+      }
+
+    }
+  document.getElementById('texto_resultado').innerHTML =  "<table><tr><td>El alumno con la peor nota es: </td></tr>" +
+                                                          "<tr><td>Codigo: </td><td>" + notamenor.codigo + "</td></tr>" +
+                                                          "<tr><td>Nombre: </td><td>" + notamenor.nombre + "</td></tr>" +
+                                                          "<tr><td>Nota: </td><td>" + notamenor.nota + "</td></tr></table>";
+
+}
+
+
+</script>
+</html>

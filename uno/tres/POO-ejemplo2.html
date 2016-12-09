@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+
+
+    <p id="mensaje"></p>
+
+
+
+    <button onclick="miFuncion()">Mostar Promedio</button>
+
+
+
+</body>
+
+<script>
+
+
+		function Estudiante(codigo, nombre, nota1, nota2) {
+
+		    this.codigo = codigo;
+		    this.nombre = nombre;
+		    this.nota1 = nota1;
+		    this.nota2 = nota2;
+
+
+
+		    this.promedio = function() {
+
+
+		    	var promedio=(nota1+nota2)/2;
+
+
+		        document.getElementById("mensaje").innerHTML ="El prmedio del estudiante "+this.nombre+" es: "+promedio;
+		    };
+
+		}
+
+
+		var estudiante = new Estudiante("001", "Roberto Hurtado", 3.2, 3.9);
+
+
+
+		function miFuncion() {
+		    estudiante.promedio();
+		}
+
+
+
+
+</script>
+
+</html>
