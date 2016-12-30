@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery-3.1.1.js" charset="utf-8"></script>
+  <style media="screen">
+    #caja{
+      position: absolute;
+      background-color: #0B2161;
+      width: 50px;
+      height: 50px;
+    }
+    #caja2{
+      position: absolute;
+      background-color: #B45F04;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+    <h3>Hide - Show</h3>
+    <p id="parrafo">Soy un parrafo</p>
+    <input type="button" id="hide" name="" value="Hide">
+    <input type="button" id="show" name="" value="Show">
+    <hr>
+        <h3>Animate</h3>
+        <div class="" id="caja">
+
+        </div>
+        <br><br><br>
+        <input type="button" id="animate" name="" value="Mover >>">
+        <hr>
+            <h3>Stop</h3>
+            <div class="" id="caja2">
+
+            </div>
+            <br><br><br>
+            <input type="button" id="start" name="" value="Aumenta tamaño">
+            <input type="button" id="stop" name="" value="Parara aumento">
+
+
+
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#hide').click(function() {
+      $('#parrafo').hide();
+    });
+
+    $('#show').click(function() {
+        $('#parrafo').show(5000, function() {
+          alert('el parrafo ya no esta oculto');
+        });
+    });
+
+    $('#animate').click(function() {
+        $('#caja').animate({'left' : '+=50px', 'width' : '+=5px'});
+    });
+
+    $('#start').click(function() {
+        $('#caja2').animate({'width' : '2000px'}, 10000);
+    });
+
+    $('#stop').click(function(){
+        $('#caja2').stop();
+    });
+  });
+</script>
+</html>

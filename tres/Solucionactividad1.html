@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+
+    var estudiante = {
+
+        id: null,
+        nombre: null,
+        edad:null,
+
+        init: function(propieades) {
+            estudiante.propieades = propieades;
+        },
+
+        mostrarId: function() {
+            console.log("El id del estudiante es:" + estudiante.propieades.id);
+        },
+
+        mostrarNombre: function() {
+            console.log("El nombre del estudiante es:" + estudiante.propieades.nombre);
+        },
+
+        mostrarEdad: function() {
+            console.log("La edad del estudiante es:" + estudiante.propieades.edad);
+        }
+    };
+
+
+
+    var propieades = {
+        id: "001",
+        nombre: "Carlos Coranado",
+        edad:19
+    };
+
+    estudiante.init(propieades);
+
+    estudiante.mostrarId();
+    estudiante.mostrarNombre();
+    estudiante.mostrarEdad();
+
+
+    
+    </script>
+
+</body>
+
+</html>

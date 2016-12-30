@@ -1,0 +1,60 @@
+#div{
+  background: #34495e;
+  position: relative;
+  top:10%;
+  left:25%;
+  width:50%;
+  height:60%;
+  padding: 10px 10px 10px 10px;
+}
+
+#cabecera{
+  background: #95a5a6;
+  padding: 50px 10px 10px 10px;
+  position: relative;
+  top: 5%;
+  left:25%;
+  width: 50%;
+  height: 5%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#operacion{
+  border-radius: 5px;
+  background-color: #fff;
+  background-color: #bdc3c7;
+}
+
+
+#texto,#texto2{
+  font-family:Arial;
+  font-weight: bolder;
+  color: #fff;
+
+}
+#texto_resultado, #listado_estudiantes{
+  font-size: 14px;
+  font-family:Arial;
+  font-weight: bolder;
+  color: #fff;
+
+}
+
+#border_table{
+  border: solid thin;
+}
+
+.formulario>p{
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
+#nota, #codigo, #nombre{
+  border-radius: 5px;
+  width: 50%;
+  height: 25px;
+  font-size: 15px;
+}

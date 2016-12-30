@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+     <p>Mi primer parrafo</p>
+
+    <p>Mi segundo parrafo</p>
+
+    <p>Mi tercer parrafo</p>
+
+    <p>Mi cuarto parrafo</p>
+
+    <button onclick="cambiarColor()">Cambiar Parrafos</button>
+
+    <script>
+    function cambiarColor() {
+        document.getElementsByTagName("p")[0].style.color = "orange";
+        document.getElementsByTagName("p")[3].style.color = "red";
+        document.getElementsByTagName("p")[2].innerHTML="Parrafo modificado!!";
+    }
+    </script>
+
+</body>
+
+</html>

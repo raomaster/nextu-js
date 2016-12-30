@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
+  <script src="jquery-3.1.1.js" charset="utf-8"></script>
+  <style media="screen">
+    body{
+      background: #FFFBF1;
+    }
+    div{
+      background: #334D4D;
+      font-weight: bold;
+      font-size: 15px;
+      color: #FFFFFF;
+      width: 20%;
+      height: 2%;
+      text-align: center;
+      margin: 10px 0px 0px 30px;
+      border-radius: 5px;
+    }
+    p{
+      padding: 20px 0px 0px 0px;
+    }
+    button{
+      width: 80px;
+      height: 30px;
+      border-radius: 10px;
+      background: #B3C54D;
+      margin: 10px 0px 0px 30px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+    <button type="button" name="button">Toggle</button>
+    <div class="">
+      <p>Voy a ocultarme y luego mostrarme.</p>
+
+    </div>
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('button').click(function() {
+          $('div').toggle('slow');
+      });
+  });
+</script>
+</html>

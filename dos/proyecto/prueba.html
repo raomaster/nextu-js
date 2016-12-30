@@ -1,0 +1,32 @@
+//EN EL CHAR CODIGO ESTA EL CODIGO MORSE LISTO, Y EN TEXTO_MATRIZ ESTA EL ABECEDARIO DE TODO EL MORSE INCLUYENDO NUMEROS
+//EN PALABRA SE DEBE GUARDAR LO TRADUCIDO, PERO HASTA AHORA SOLO IMPRIME EL MORSE
+
+void decodificar(char codigo[7]){
+	char texto_matriz[35][7];
+	int i, j, r, co;
+	char palabra[100]={' '};//parte en blanco (espacios)
+	r=0;
+	i=3;
+	j=0;
+
+	while(codigo[co]!='\0'){
+		if(codigo[c
+
+
+
+
+
+			esfgsg  o]==texto_matriz[i][j]){
+			i++;
+			co++;
+		}
+		else{
+			if(codigo[co]!=texto_matriz[i][j]){
+				co=0;
+				i=3;
+				j++;
+			}
+		}
+	}
+	palabra[r]=texto_matriz[0][j];
+}

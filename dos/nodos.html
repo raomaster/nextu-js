@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    function nodosHijos() {
+      var texto = "";
+      var div = document.getElementsByTagName('div')[0];
+      for (var i = 0; i < div.childNodes.length; i++) {
+        texto += div.childNodes[i].nodeName+"<br>";
+      }
+      document.getElementById('mensaje').innerHTML = texto;
+    }
+  </script>
+</head>
+<body>
+  <div class="">
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <p>Parrafo 3</p>
+
+
+  </div>
+  <button type="button" onclick="nodosHijos()" name="button">click!</button>
+  <h3>Ejemplo</h3>
+  <p id="mensaje">Hola javascript</p>
+</body>
+</html>

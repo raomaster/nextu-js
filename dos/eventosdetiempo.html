@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    #mireloj{
+      background-color: black;
+      font-size: xx.larger;
+      font-family: "Courier";
+      color: #04FF00;
+      width: 250px;
+      border: 2px solid #000;
+      padding: 5px 10px 5px 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="" id="mireloj">
+    00:00:00
+  </div>
+  <br>
+  <button type="button" name="button" onclick="iniciarReloj()">Iniciar Reloj</button>
+  <button type="button" name="button" onclick="pararReloj()">Parar Reloj</button>
+  <script type="text/javascript">
+    var funcionReloj;
+
+    function iniciarReloj(){
+      var reloj = new Date();
+      var horas = reloj.getHours();
+      var minutos = reloj.getMinutes();
+      var segundos = reloj.getSeconds();
+      if(horas < 10){
+        horas = "0"+horas;
+      }
+      if(minutos < 10){
+        minutos = "0" + minutos;
+      }
+      if(segundos < 10){
+        segundos = "0" + segundos;
+      }
+      document.getElementById("mireloj").innerHTML = horas+":"+minutos+":"+segundos;
+      funcionReloj = setTimeout(iniciarReloj, 1000);
+    }
+
+    function pararReloj(){
+      clearInterval(funcionReloj);
+    }
+  </script>
+</body>
+</html>

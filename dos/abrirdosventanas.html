@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" onclick="abrirVentana()" name="button">Abrir ventana</button>
+  <button type="button" onclick="abrirVentana2()" name="button">Abrir ventana 2</button>
+
+  <script type="text/javascript">
+    var ventana1;
+    var ventana2;
+
+    function abrirVentana(){
+      ventana1 = window.open("", "_blank", "width=200, height=200");
+      ventana1.focus();
+    }
+
+    function abrirVentana2(){
+      ventana2 = window.open("", "_blank", "height=300, width=300");
+      var html = "";
+      html += "<h1>Mi ventana 2</h1>";
+      html += "<p>Contenido de la nueva ventana</p>";
+      ventana2.document.write(html);
+    }
+  </script>
+
+</body>
+</html>

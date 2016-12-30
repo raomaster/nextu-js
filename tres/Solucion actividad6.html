@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.1.1.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+
+
+        $("#boton1").click(function() {
+
+
+            var div1 = $("div").get(0);
+            $(div1).html("<b>Mi primer div modificado!!</b>")
+
+            var div2 = $("div").get(1);
+            $(div2).html("<b>Mi segundo div modificado!!</b>")
+
+        });
+
+
+
+        $("#boton2").click(function() {
+
+            var div1 = $("div").get(0);
+            $(div1).css("backgroundColor", "orange");
+
+
+            var div2 = $("div").get(1);
+            $(div2).css("backgroundColor", "purple");
+
+
+        });
+
+
+        $("#boton3").click(function() {
+
+            $("#miDiv1").width("300px");
+            $("#miDiv1").height("300px");
+
+
+            $("#miDiv2").width("300px");
+            $("#miDiv2").height("300px");
+
+
+        });
+
+        $("#boton4").click(function() {
+
+
+            var divs = $("div");
+            divs.addClass("miEstilo");
+
+
+
+        });
+
+
+
+        $("#boton5").click(function() {
+
+
+            var divs = $("div");
+            divs.removeClass("miEstilo");
+
+
+
+        });
+
+
+
+    });
+    </script>
+
+    <style>
+    .miEstilo {
+        font-size: large;
+        color: white;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="miDiv1">
+        Mi div 1!!!
+    </div>
+
+
+
+    <div id="miDiv2">
+        Mi div 2!!!
+    </div>
+
+
+
+    <button id="boton1">Modificar textos</button>
+
+    <button id="boton2">Modificar css</button>
+
+    <button id="boton3">Modificar dimension</button>
+
+    <button id="boton4">Agregar mi estilo</button>
+
+    <button id="boton5">Remover mi estilo</button>
+
+
+
+
+
+</body>
+
+</html>

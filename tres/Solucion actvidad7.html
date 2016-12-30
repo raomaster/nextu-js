@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+
+        var animales = ["Oso", "Tigre", "Aguila"];
+
+        var vehiculo1 = {
+            placa: "WER-454",
+            marca: "Toyota",
+            modelo: "2006"
+        };
+
+        var vehiculo2 = {
+            placa: "HSJ-098",
+            marca: "Mazda",
+            modelo: "2009"
+        };
+
+        $("#boton1").click(function() {
+
+            var elementos = "Elementos del arreglo animales:<br>";
+            var parrafo1 = $("#p1");
+
+
+
+            $.each(animales, function(indice, valor) {
+                elementos += "Indice es: " + indice + " su valor es: " + valor + "<br>";
+            });
+
+            $(parrafo1).html(elementos);
+
+
+
+        });
+
+
+
+        $("#boton2").click(function() {
+
+            var elementos = "Elementos del objeto vehiculo 1:<br>";
+            var parrafo2 = $("#p2");
+
+
+
+            $.each(vehiculo1, function(propiedad, valor) {
+                elementos += propiedad + " : " + valor + "<br>";
+            });
+
+
+            $(parrafo2).html(elementos);
+
+        });
+
+
+
+        $("#boton3").click(function() {
+
+            var elementos = "";
+            var parrafo3 = $("#p3");
+
+
+            if ($.inArray('Tigre', animales) !== -1) {
+                $(parrafo3).html("Tigre existe en el arreglo animales!!");
+
+            } else {
+                $(parrafo3).html("Tigre no existe en el arreglo animales!!");
+            }
+
+
+
+
+        });
+
+
+        $("#boton4").click(function() {
+
+            var elementos = "Propiedades del objeto vehiculo 1 cambiadas!:<br>";
+            var parrafo4 = $("#p4");
+
+
+            var vehiculo3 = $.extend(vehiculo1, vehiculo2);
+
+            $.each(vehiculo3, function(propiedad, valor) {
+                elementos += propiedad + " : " + valor + "<br>";
+            });
+
+            $(parrafo4).html(elementos);
+
+
+
+        });
+
+
+
+
+    });
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+    <p id="p1">Arreglo animales</p>
+    <p id="p2">Objeto vehiculo1</p>
+    <p id="p3">Esta el tigre?</p>
+    <p id="p4">Nuevo objeto vehiculo</p>
+
+
+
+
+    <button id="boton1">Mostrar Arreglo Animales</button>
+
+    <button id="boton2">Mostrar Objeto Vehiculo 1</button>
+
+    <button id="boton3">Existe Tigre?</button>
+
+    <button id="boton4">Cambiar Propiedades</button>
+
+
+
+
+</body>
+
+</html>
